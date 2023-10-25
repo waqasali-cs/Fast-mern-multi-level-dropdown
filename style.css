@@ -1,0 +1,173 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    font-size: 62.5%;
+}
+
+body{
+    font-size: 1.6rem;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+header{
+    background-color: rgba(29, 13, 53, 0.705);
+    /* max-height: 10vh; */
+    /* height: 90%; */
+}
+
+
+
+.nav-items{
+    font-size: 2rem;
+    text-transform: uppercase;
+    list-style: none;
+    /* border:2px solid red; */
+}
+.nav-link{
+    text-decoration: none;
+    color: #fff;
+}
+
+.nav-item{
+    display: inline-block;
+    /* padding: 2rem; */
+    /* border: 2px solid green; */
+    text-align: center;
+    padding: 2rem;
+}
+.nav-item:hover{
+    background-color: rgba(255, 13, 13, 0.741);
+}
+
+.level-1-wrapper{
+    position: relative;
+}
+
+.level-1-wrapper::after{
+    content: ">";
+    color: #fff;
+    position: absolute;
+    right: -0.2rem;
+    top: 2.6rem;
+    font-size: 1.4rem;
+    background-color: #000;
+    border-radius: 100%;
+    width: 2rem;
+    height: 2rem;
+    transform: rotate(90deg);
+    transition: all 0.2s ease-in-out;
+}
+.level-1-wrapper:hover::after{
+    top: 4rem;
+}
+.level-1-wrapper:hover > .level-1{
+    display: block;
+    animation: slidedown 0.4s ease-in-out;
+}
+
+.level-1{
+    display: none;
+    position: absolute;
+    left: 0;
+    top: 80%;
+    background-color: rgba(33, 38, 42, 0.612);
+    width: 100%;
+    margin-top: 1rem;
+    transition: all 0.3s ease-in-out;
+    
+    
+}
+
+.level-1-nav-items{
+    border-bottom: 1px solid #000;
+    padding: 1rem 0;
+}
+.level-1-nav-items:hover{
+    background-color: red;
+}
+
+
+.level-2-wrapper{
+    position: relative;
+}
+
+.level-2-wrapper::after{
+    content: ">";
+    color: #fff;
+    position: absolute;
+    right: 0.4rem;
+    bottom: 0.8rem;   
+    font-size: 1.4rem;
+    background-color: rgb(114, 215, 226);
+    border-radius: 100%;
+    width: 1.4rem;
+    height: 1.4rem;
+    transition: all 0.2s ease-in-out;
+}
+.level-2-wrapper:hover::after{
+    right: -0.2rem;
+}
+
+.level-2{
+    display: none;
+    position: absolute;
+    left: 100%;
+    top: -1rem;
+    background-color: rgba(32, 53, 75, 0.549);
+    width: 100%;
+    padding-bottom: 0.4rem;
+    margin-top: 1rem;
+}
+.level-2-nav-items{
+    border-bottom: 1px solid #000;
+    padding: 1rem 0;
+}
+
+.level-2-nav-items:hover{
+    background-color: red;
+}
+
+.level-2-wrapper:hover > .level-2{
+    display: block;
+    animation: slidedown 0.4s ease-in-out;
+
+}
+
+.hero{
+    background-image: url(heic0409a.jpg);
+    background-size: cover;
+    height: 90vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.heading-primary{
+    color: #fff;
+    /* border: 2px solid red; */
+    font-size: 5rem;
+    text-transform: uppercase;
+    letter-spacing: 1rem;
+    word-spacing: 1rem;
+}
+.coa{
+    color: transparent;
+    text-transform: uppercase;
+    font-size: 8rem;
+    background-image: linear-gradient(210deg, #42583e, #f3da1c);
+    background-clip: text;
+    -webkit-background-clip: text;  
+}
+
+@keyframes slidedown{
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
